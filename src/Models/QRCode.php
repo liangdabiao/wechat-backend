@@ -11,7 +11,6 @@
 
 namespace iBrand\Wechat\Backend\Models;
 
-use iBrand\Shop\Backend\Model\Store;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -33,10 +32,5 @@ class QRCode extends Model
     public function accounts()
     {
         return $this->belongsTo(Account::class, 'account_id');
-    }
-
-    public function storelocator()
-    {
-        return $this->hasOne(Store::class, 'qr_code_id');
     }
 }

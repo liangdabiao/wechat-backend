@@ -12,8 +12,6 @@
 namespace iBrand\Wechat\Backend\Http\Controllers;
 
 use iBrand\Wechat\Backend\Facades\CardService;
-use iBrand\Wechat\Backend\Models\Card;
-use iBrand\Wechat\Backend\Models\LandPage;
 use iBrand\Wechat\Backend\Repository\CardRepository;
 use Illuminate\Http\Request;
 

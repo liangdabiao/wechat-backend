@@ -13,7 +13,6 @@ namespace iBrand\Wechat\Backend\Http\Controllers;
 
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Layout\Content;
-//use iBrand\Component\User\Models\UserBind;
 use iBrand\Wechat\Backend\Facades\FanService;
 use iBrand\Wechat\Backend\Models\Fan;
 use iBrand\Wechat\Backend\Models\FanGroup;
@@ -168,14 +167,10 @@ class FansController extends Controller
                     $item['tagid_list'] = str_replace('[', ',', $item['tagid_list']);
                     $item['tagid_list'] = str_replace(']', ',', $item['tagid_list']);
 
-//                    if ($user = UserBind::where(['type' => 'wechat', 'open_id' => $item['openid']])->first()) {
-//                        $item['user_id'] = $user->user_id;
-//                    }
-
                     try {
                         $res = $this->fanRepository->getFansByOpenid($account_id, $item['openid'], $item);
                     } catch (\Exception $e) {
-                        Log::info($e);
+                        \Log::info($e);
                     }
                 }
             }

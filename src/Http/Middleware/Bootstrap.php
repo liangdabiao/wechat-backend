@@ -9,7 +9,6 @@
 namespace iBrand\Wechat\Backend\Http\Middleware;
 
 use Encore\Admin\Facades\Admin;
-use iBrand\Backend\Backend;
 use Illuminate\Http\Request;
 
 class Bootstrap
@@ -25,14 +24,14 @@ class Bootstrap
         Admin::css('/assets/wechat-backend/css/reply.css');
 
 
-        Backend::js('/assets/wechat-backend/js/loading.js');
-        Backend::js('/assets/wechat-backend/libs/Chart.min.js');
-        Backend::js('/assets/wechat-backend/libs/element/vue.js');
-        Backend::js('/assets/wechat-backend/libs/element/index.js');
-        Backend::js('/assets/wechat-backend/libs/ladda/spin.min.js');
-        Backend::js('/assets/wechat-backend/libs/ladda/ladda.min.js');
-        Backend::js('/assets/wechat-backend/libs/ladda/ladda.jquery.min.js');
-        Backend::js('/assets/wechat-backend/js/common.js');
+        Admin::js('/assets/wechat-backend/js/loading.js');
+        Admin::js('/assets/wechat-backend/libs/Chart.min.js');
+        Admin::js('/assets/wechat-backend/libs/element/vue.js');
+        Admin::js('/assets/wechat-backend/libs/element/index.js');
+        Admin::js('/assets/wechat-backend/libs/ladda/spin.min.js');
+        Admin::js('/assets/wechat-backend/libs/ladda/ladda.min.js');
+        Admin::js('/assets/wechat-backend/libs/ladda/ladda.jquery.min.js');
+        Admin::js('/assets/wechat-backend/js/common.js');
 
         return $next($request);
     }
